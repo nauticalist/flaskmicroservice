@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import UsersList from './components/UsersList'
+import UsersList from './components/UsersList';
+import AddUser from './components/AddUser';
 
 class App extends Component {
     constructor() {
@@ -23,10 +24,12 @@ class App extends Component {
             <section className="section">
                 <div className="container">
                     <div className="columns">
-                        <div className="column is-one-third">
+                        <div className="column is-one-half">
                             <br/>
                             <h1 className="title is-1">All Users</h1>
                             <hr/><br/>
+                            <AddUser/>
+                            <br/><br/>
                             <UsersList users={this.state.users}/>
                         </div>
                     </div>
